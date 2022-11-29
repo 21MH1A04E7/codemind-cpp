@@ -5,7 +5,7 @@ int fun(int n){
     while(n){
         int r=n%10;
         sum=r*r+sum;
-        n=n/10;
+        n/=10;
     }
     return sum;
 }
