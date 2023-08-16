@@ -20,14 +20,17 @@ int main(){
     int count=INT_MIN;
     for(int i=0;i<n;i++){
         int d=digit(arr[i]);
-        if(count<d){
-            count=d;
-        }
-    }
-    for(int i=0;i<n;i++){
-        if(digit(arr[i])==count){
+        if(count==d){
             ans++;
+        }else if(count<d){
+            count=d;
+            ans=1;
         }
     }
+    // for(int i=0;i<n;i++){
+    //     if(digit(arr[i])==count){
+    //         ans++;
+    //     }
+    // }
     cout<<ans<<endl;
 }
